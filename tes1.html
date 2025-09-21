@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ulang Tahun Spesial — Gentleman Edition</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="tes1.css" />
+  </head>
+  <body>
+    <!-- Latar partikel & kembang api -->
+    <canvas id="bg-stars"></canvas>
+    <canvas id="fireworks"></canvas>
+
+    <!-- Balon melayang -->
+    <div class="balloons" aria-hidden="true">
+      <span class="balloon b1"></span>
+      <span class="balloon b2"></span>
+      <span class="balloon b3"></span>
+      <span class="balloon b4"></span>
+    </div>
+
+    <main class="wrap">
+      <!-- Gerbang input -->
+      <section id="gate" class="card center">
+        <h1 class="title">Ulang Tahun Spesial</h1>
+        <p class="lead">Masukkan nama yang berulang tahun:</p>
+        <div class="row">
+          <input
+            id="nama"
+            type="text"
+            placeholder="Nama yang berulang tahun..."
+          />
+          <button id="btnMulai" class="primary">Mulai</button>
+        </div>
+        <small class="hint">Tema navy/teal • elegan gentleman</small>
+      </section>
+
+      <!-- Surat pembuka -->
+      <section id="surat" class="card hidden">
+        <div class="envelope">
+          <div class="flap"></div>
+          <div class="letter">
+            <h2 id="dear" class="script">Untuk kamu,</h2>
+            <p id="letterText" class="type"></p>
+            <div class="actions">
+              <button id="btnBukaKue" class="primary">Buka Kejutan ➜</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Countdown -->
+      <section id="countdown" class="count hidden">
+        <div id="countNumber">3</div>
+      </section>
+
+      <!-- Panggung utama -->
+      <section id="stage" class="hidden">
+        <div class="flex-stage">
+          <!-- Kue 3 tingkat -->
+          <div class="cake">
+            <div class="plate"></div>
+            <div class="tier t1">
+              <div class="frost f1"></div>
+              <div class="sprinkles">
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="tier t2">
+              <div class="frost f2"></div>
+              <div class="sprinkles">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="tier t3">
+              <div class="frost f3"></div>
+              <div class="sprinkles"><span></span><span></span></div>
+              <div class="candle">
+                <div class="wick"></div>
+                <div class="flame"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stiker maskulin (acak: beruang/dino) -->
+          <img id="sticker" class="sticker" alt="stiker lucu" />
+        </div>
+
+        <!-- Ucapan panjang -->
+        <article class="msg">
+          <h2 id="judul" class="title-sm"></h2>
+          <p id="ucapan" class="justify"></p>
+        </article>
+
+        <!-- Pertanyaan bucin -->
+        <div id="bucin" class="bucin hidden">
+          <h3>
+            <span id="loverName"></span>, kamu mau mencintai aku selamanya, kan?
+          </h3>
+          <div class="row">
+            <button id="yesBtn" class="primary">Iya 💙</button>
+            <button id="noBtn" class="ghost">Tidak 🙈</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Confetti -->
+    <canvas id="confettiCanvas" class="overlay"></canvas>
+
+    <script src="tes1.js"></script>
+  </body>
+</html>
